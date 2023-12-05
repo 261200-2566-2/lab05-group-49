@@ -77,6 +77,16 @@ public class char_ implements Character{
     @Override
     public void showState() {
         update_state(); //เรียกใช้ function update_state() เพื่อ update ค่าต่างๆ แล้วแสดงค่านั้น
+
+        System.out.println("|<------------------------------>|");
+        System.out.println("    Name : " + name + " (Level " + level + ")");
+        System.out.println("    HP/Max Hp ❤\uFE0F : " + hp + "/" + max_hp);
+        System.out.println("    Mana/Max Mana \uD83D\uDC99: " + mana + "/" + max_mana);
+        System.out.println("    Base Speed : " + r);
+        System.out.println("    Max Speed : " + max_speed);
+        System.out.println("    Damage \uD83D\uDDE1\uFE0F: " + damage);
+        System.out.println("    Defense \uD83D\uDEE1\uFE0F: " + defense);
+
         System.out.println("|------------------------------|");
         System.out.println("    Name : " + name + " (Level " + level + ")");
         System.out.println("    HP/Max Hp : " + hp + "/" + max_hp);
@@ -85,6 +95,7 @@ public class char_ implements Character{
         System.out.println("    Max Speed : " + max_speed);
         System.out.println("    Damage : " + damage);
         System.out.println("    Defense : " + defense);
+
         if(e_sword != null){ //ถ้าผู้เล่นถือดาบ
             System.out.println("    equipSword");
         }
@@ -97,6 +108,8 @@ public class char_ implements Character{
         if(e_shoes != null){ //ถ้าผู้เล่นถือโล่
             System.out.println("    equipShoes");
         }
+
+        System.out.println("|<------------------------------>|");
         System.out.println("|------------------------------|");
         System.out.println(" ");
     }

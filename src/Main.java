@@ -13,6 +13,10 @@ public class Main {
             Ring r1 = new Ring("r1", 10);
             Shoes s1 = new Shoes("s1", 20);
 
+
+
+
+
             F1.showState();
             C1.showState();
 
@@ -34,6 +38,7 @@ public class Main {
             F1.showState();
             C1.showState();
 
+
             C1.unequipSword();
             C1.showState();
 
@@ -44,9 +49,29 @@ public class Main {
             C1.attack(F1);
             F1.showState();
 
+
+
+            C1.unequipSword();
+            C1.showState();
+
+            C1.equipRing(r1);
+            C1.showState();
+
+            F1.equipShoes(s1);
+            C1.attack(F1);
+            F1.showState();
+
+
             F1.unequipSword();
             F1.unequipShield();
             F1.showState();
         }
     }
 }
+
+
+
+
+
+
+

@@ -4,3 +4,4 @@ public interface Character {
     void level_up();
     void takeDamage(double d);
 }
+
