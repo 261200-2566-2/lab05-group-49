@@ -14,7 +14,10 @@ public class Ring implements Accessories{
         damage = d*2;
     }
 
-    public double getDamageRing() { return damage; }
+    public double getDamageRing() {
+        upState();
+        return damage;
+    }
 
     @Override
     public String getClassName() {

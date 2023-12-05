@@ -10,10 +10,13 @@ public class Shoes implements Accessories{
     }
     @Override
     public void upState() {
-        defense = s;
+        defense += s;
     }
 
-    public double getDefenseShoes() { return defense; }
+    public double getDefenseShoes() {
+        upState();
+        return defense;
+    }
 
     @Override
     public String getClassName() {

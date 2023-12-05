@@ -36,11 +36,10 @@ public class char_ implements Character{
             max_speed -= (0.1 + 0.08*e_shield.getLevelShield()); //ค่า max speed ลดลง
         }
         if(e_ring != null){ //ถ้าผู้เล่นใส่แหวน
-            damage = e_ring.getDamageRing(); //พลังโจมตีเพิ่มขึ้น
+            damage = damage + e_ring.getDamageRing(); //พลังโจมตีเพิ่มขึ้น
         }
         if(e_shoes != null){ //ถ้าผู้เล่นใส่รองเท้า
             defense = defense + e_shoes.getDefenseShoes(); //พลังป้องกันเพิ่มขึ้น
-            damage /= 2;
         }
         if(max_speed < 0 ){ //ถ้าค่า max speed น้อยกว่า 0
             max_speed = 0; //set max speed = 0
@@ -111,6 +110,9 @@ public class char_ implements Character{
     @Override
     public void takeDamage(double d){ //function แสดงค่าพลังชีวิตหลังจากถูกโจมตี
         double dam = defense - d;
+        if(e_shoes != null){
+            dam /= 2;
+        }
         if(dam > 0){ //ถ้าค่าความเสียหาย > 0 (defense > d)
             dam = 0; //ให้ค่าความเสียหายเป็น 0
         }
